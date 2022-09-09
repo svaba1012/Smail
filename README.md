@@ -10,3 +10,4 @@ Database is built so it can support attachment sending in future. Some other fun
 * Marking read and unread messages
 * Sending attachments
 * ...
+>App is developed in InteliJ IDE
