@@ -1,0 +1,25 @@
+
+
+
+.tab{
+-fx-tab-min-width: 30px;
+-fx-tab-max-width: 30px;
+-fx-tab-min-height: 100px;
+-fx-tab-max-height: 100px;
+}
+
+.msgBox{
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-bottom-width: 0;
+    -fx-border-radius: 10;
+}
+
+.msgBox:hover{
+    -fx-border-width: 3;
+    -fx-font-weight: bold;
+}
+
+.tabBox{
+    -fx-margin-left: 20;
+}

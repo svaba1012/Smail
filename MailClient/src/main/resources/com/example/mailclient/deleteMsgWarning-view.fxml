@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.mailclient.DeleteMsgWarningController"
+            prefHeight="400.0" prefWidth="600.0" alignment="CENTER">
+    <Label>Are you sure you want to delete selected message?</Label>
+    <HBox alignment="CENTER">
+        <Button fx:id="btnCancelDelete" onAction="#onClickBtnCancelDelete" cancelButton="true">No</Button>
+        <Button fx:id="btnDeleteMsg" onAction="#onClickBtnDeleteMsg" defaultButton="true">Yes</Button>
+    </HBox>
+</VBox>

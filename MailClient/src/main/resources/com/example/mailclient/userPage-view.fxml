@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.mailclient.UserPageController"
+            prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css">
+    <top>
+        <VBox>
+        <HBox>
+            <Label>SMail</Label>
+
+            <FontIcon iconLiteral="fa-envelope" iconSize="32"/>
+
+        </HBox>
+        <HBox>
+            <Button fx:id="btnNewMsg" onAction="#onNewMsgBtnClick">New message <graphic>
+                <FontIcon iconLiteral="fa-plus-circle" iconSize="24"/>
+            </graphic></Button>
+
+        </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TabPane side="LEFT" rotateGraphic="true" fx:id="tabPaneMenu" styleClass="tab" >
+            <Tab styleClass="tab" closable="false" fx:id="inboxTab" onSelectionChanged="#onSelectedInboxTab"  >
+                <ScrollPane>
+
+                    <VBox fx:id="inboxBox" styleClass="tabBox" spacing="3">
+                        <padding>
+                            <Insets left="50" right="50" top="10"></Insets>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+            <Tab styleClass="tab" closable="false" fx:id="sentTab" onSelectionChanged="#onSelectedSentTab">
+                <ScrollPane>
+                    <VBox fx:id="sentBox" styleClass="tabBox" spacing="3">
+                        <padding>
+                            <Insets left="50" right="50" top="10"></Insets>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+            <Tab closable="false" fx:id="unfinishedTab"  onSelectionChanged="#onSelectedUnfinishedTab">
+                <ScrollPane>
+                    <VBox fx:id="unfinishedBox" styleClass="tabBox" spacing="3">
+                        <padding>
+                            <Insets left="50" right="50" top="10"></Insets>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+
+            <Tab closable="false" fx:id="arrangedTab"  onSelectionChanged="#onSelectedArrangedTab">
+                <ScrollPane>
+                    <VBox spacing="3" fx:id="arrangedBox" styleClass="tabBox">
+                        <padding>
+                            <Insets left="50" right="50" top="10"></Insets>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </Tab>
+
+        </TabPane>
+    </center>
+    <right>
+        <VBox>
+
+        </VBox>
+    </right>
+    <bottom>
+        <HBox>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

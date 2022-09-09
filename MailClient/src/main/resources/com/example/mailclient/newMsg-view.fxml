@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.skin.ColorPalette.ColorSquare?>
+<?import javafx.scene.shape.Rectangle?>
+<?import org.controlsfx.control.ListActionView?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.mailclient.NewMsgController"
+      prefHeight="400.0" prefWidth="600.0" spacing="10">
+    <padding>
+        <Insets top="30" left="20" right="20"></Insets>
+    </padding>
+    <HBox>
+        <Label>To: </Label>
+        <HBox fx:id="reciversBox"></HBox>
+    </HBox>
+    <HBox>
+        <TextField fx:id="textNewReciver" promptText="Reciver username"></TextField>
+        <Button fx:id="btnAddReciver" onAction="#onClickBtnAddReciver">
+            <graphic>
+                <FontIcon iconLiteral="fa-user-plus" iconSize="24"></FontIcon>
+            </graphic>
+            </Button>
+    </HBox>
+
+
+    <TextField fx:id="textMsgTitle" promptText="Message title"></TextField>
+    <TextArea fx:id="textMsgContent" promptText="Message content..."></TextArea>
+    <VBox fx:id="attachmentBox" spacing="10"></VBox>
+    <Label fx:id="lblSendingTime"></Label>
+    <HBox>
+        <Button fx:id="btnSendMsg" onAction="#onClickBtnSendMsg">
+            <graphic>
+                <FontIcon iconLiteral="fa-send" iconSize="32"></FontIcon>
+            </graphic>
+        </Button>
+        <Button fx:id="btnAddAtachment" onAction="#onClickBtnAddAtachment">
+            <graphic>
+                <FontIcon iconLiteral="eva-attach-2" iconSize="32"></FontIcon>
+            </graphic>
+        </Button>
+        <Button fx:id="btnArrangeSending" onAction="#onClickBtnArrangeSending">
+            <graphic>
+                <FontIcon iconLiteral="bi-clock" iconSize="32"></FontIcon>
+            </graphic>
+        </Button>
+    </HBox>
+</VBox>
